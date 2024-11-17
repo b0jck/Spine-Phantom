@@ -1,0 +1,235 @@
+<mujoco model="phantom">
+  <compiler meshdir="Phantom_Meshes_cm" texturedir="Phantom_Meshes_cm"/>
+
+  <compiler angle="radian"/>
+
+  <option timestep="0.005" noslip_iterations="4"/>
+
+  <size njmax="900" nconmax="300" nkey="1"/>
+
+  <visual>
+    <global offwidth="1920" offheight="1080"/>
+    <map znear="0.001"/>
+    <scale jointlength="8" jointwidth="0.5" framelength="2" framewidth="0.3"/>
+  </visual>
+
+  <statistic meansize="0.01" extent="1"/>
+
+  <default>
+    <joint limited="true" solreflimit="0.01 1" solimplimit="0.9 0.99 0.01" stiffness="0.1" armature="0.0001" damping="0.01"/>
+    <geom type="mesh" contype="0" conaffinity="0" friction="0.9" solref="0.01 1" solimp="0.95 0.99 0.001"/>
+    <tendon rgba="0.5 0 0 1"/>
+    <general ctrllimited="true" ctrlrange="-5 5" dyntype="filter" dynprm="0.05" gainprm="0.02"/>
+    <default class="collision_primitive">
+      <geom type="capsule" contype="1" conaffinity="1" condim="1" group="3" rgba="0 0.5 0.5 1" density="300"/>
+    </default>
+  </default>
+
+  <asset>
+    <texture name="//unnamed_texture_0" type="skybox" builtin="gradient" rgb1="0.6 0.8 0.9" rgb2="0 0 0" width="64" height="64"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.1 0.2 0.3" rgb2="0.2 0.3 0.4" mark="edge" markrgb="0.2 0.3 0.4" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.2"/>
+    <mesh name="Prototipo_Arteria_Carotide_DX.stl" file="Prototipo_Arteria_Carotide_DX.stl"/>
+    <mesh name="Prototipo_Muscoli_DX.stl" file="Prototipo_Muscoli_DX.stl"/>
+    <mesh name="Prototipo_Scocca_Supporto_Posteriore.stl" file="Prototipo_Scocca_Supporto_Posteriore.stl"/>
+    <mesh name="Prototipo_Vena_Giugulare_SX.stl" file="Prototipo_Vena_Giugulare_SX.stl"/>
+    <mesh name="Prototipo_Disco_Intervertebrale_C6-7.stl" file="Prototipo_Disco_Intervertebrale_C6-7.stl"/>
+    <mesh name="Prototipo_Disco_Intervertebrale_C4-5.stl" file="Prototipo_Disco_Intervertebrale_C4-5.stl"/>
+    <mesh name="Prototipo_Disco_Intervertebrale_C2-3.stl" file="Prototipo_Disco_Intervertebrale_C2-3.stl"/>
+    <mesh name="Prototipo_Vertebre_Supporti.stl" file="Prototipo_Vertebre_Supporti.stl"/>
+    <mesh name="Prototipo_Nervo_Vago_DX.stl" file="Prototipo_Nervo_Vago_DX.stl"/>
+    <mesh name="Prototipo_Scocca_Staffe.stl" file="Prototipo_Scocca_Staffe.stl"/>
+    <mesh name="Prototipo_Midollo_Parte_Interna.stl" file="Prototipo_Midollo_Parte_Interna.stl"/>
+    <mesh name="Prototipo_Muscolo_Stern_SX.stl" file="Prototipo_Muscolo_Stern_SX.stl"/>
+    <mesh name="Prototipo_Vertebra_C6.stl" file="Prototipo_Vertebra_C6.stl"/>
+    <mesh name="Prototipo_Vertebra_C7.stl" file="Prototipo_Vertebra_C7.stl"/>
+    <mesh name="Prototipo_Vene-Arterie_Vertebrali_DX.stl" file="Prototipo_Vene-Arterie_Vertebrali_DX.stl"/>
+    <mesh name="Prototipo_Vertebra_C5.stl" file="Prototipo_Vertebra_C5.stl"/>
+    <mesh name="Prototipo_Pacchetto_Laringe-Trachea.stl" file="Prototipo_Pacchetto_Laringe-Trachea.stl"/>
+    <mesh name="Prototipo_Muscolo_Miloioideo_DX.stl" file="Prototipo_Muscolo_Miloioideo_DX.stl"/>
+    <mesh name="Prototipo_Vertebra_C4.stl" file="Prototipo_Vertebra_C4.stl"/>
+    <mesh name="Prototipo_Disco_Intervertebrale_C3-4.stl" file="Prototipo_Disco_Intervertebrale_C3-4.stl"/>
+    <mesh name="Prototipo_Pacchetto_Tessuti.stl" file="Prototipo_Pacchetto_Tessuti.stl"/>
+    <mesh name="Prototipo_Legamenti.stl" file="Prototipo_Legamenti.stl"/>
+    <mesh name="Prototipo_Disco_Intervertebrale_C5-6.stl" file="Prototipo_Disco_Intervertebrale_C5-6.stl"/>
+    <mesh name="Prototipo_Scocca_Interna.stl" file="Prototipo_Scocca_Interna.stl"/>
+    <mesh name="Prototipo_Membrana_Giugulare-Carotide_DX.stl" file="Prototipo_Membrana_Giugulare-Carotide_DX.stl"/>
+    <mesh name="Prototipo_Vertebra_C1.stl" file="Prototipo_Vertebra_C1.stl"/>
+    <mesh name="Prototipo_Vertebra_C3.stl" file="Prototipo_Vertebra_C3.stl"/>
+    <mesh name="Prototipo_Vertebra_C2.stl" file="Prototipo_Vertebra_C2.stl"/>
+    <mesh name="Prototipo_Muscolo_Stern_DX.stl" file="Prototipo_Muscolo_Stern_DX.stl"/>
+    <mesh name="Prototipo_Vene-Arterie_Vertebrali_SX.stl" file="Prototipo_Vene-Arterie_Vertebrali_SX.stl"/>
+    <mesh name="Prototipo_Osso_Ioide.stl" file="Prototipo_Osso_Ioide.stl"/>
+    <mesh name="Prototipo_Esofago.stl" file="Prototipo_Esofago.stl"/>
+    <mesh name="Prototipo_Scocca_Supporto_Muscoli.stl" file="Prototipo_Scocca_Supporto_Muscoli.stl"/>
+    <mesh name="Prototipo_Muscolo_Miloioideo_SX.stl" file="Prototipo_Muscolo_Miloioideo_SX.stl"/>
+    <mesh name="Prototipo_Midollo_Parte_Esterna.stl" file="Prototipo_Midollo_Parte_Esterna.stl"/>
+    <mesh name="Prototipo_Membrana_Giugulare-Carotide_SX.stl" file="Prototipo_Membrana_Giugulare-Carotide_SX.stl"/>
+    <mesh name="Prototipo_Flessori_Spinali.stl" file="Prototipo_Flessori_Spinali.stl"/>
+    <mesh name="Prototipo_Scocca_Esterna.stl" file="Prototipo_Scocca_Esterna.stl"/>
+    <mesh name="Prototipo_Muscoli_SX.stl" file="Prototipo_Muscoli_SX.stl"/>
+    <mesh name="Prototipo_Arteria_Carotide_SX.stl" file="Prototipo_Arteria_Carotide_SX.stl"/>
+    <mesh name="Prototipo_Vena_Giugulare_DX.stl" file="Prototipo_Vena_Giugulare_DX.stl"/>
+    <mesh name="Prototipo_Tiroide.stl" file="Prototipo_Tiroide.stl"/>
+    <mesh name="Prototipo_Nervo_Vago_SX.stl" file="Prototipo_Nervo_Vago_SX.stl"/>
+  </asset>
+
+  <worldbody>
+    <light name="//unnamed_light_0" directional="true" castshadow="false" pos="0 0 5" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1"/>
+    <light name="//unnamed_light_1" pos="0 0 4" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2"/>
+    <geom name="floor" type="plane" conaffinity="1" size="10 10 0.1" material="grid"/>
+    <body name="phantom_body">
+      <body name="phantom" pos="0 0 0">
+        <body name="Frame" pos="0 0 0">
+          <geom name="Prototipo_Scocca_Esterna.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Scocca_Esterna.stl"/>
+          <geom name="Prototipo_Scocca_Staffe.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Scocca_Staffe.stl"/>
+          <geom name="Prototipo_Scocca_Supporto_Muscoli.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Scocca_Supporto_Muscoli.stl"/>
+          <geom name="Prototipo_Scocca_Interna.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Scocca_Interna.stl"/>
+          <geom name="Prototipo_Scocca_Supporto_Posteriore.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Scocca_Supporto_Posteriore.stl"/>
+          <geom name="Prototipo_Vertebre_Supporti.stl" group="1" rgba="1 1 1 1" mesh="Prototipo_Vertebre_Supporti.stl"/>
+          <geom name="Prototipo_Pacchetto_Tessuti.stl" group="1" rgba="1 0.89 0.96 1" mesh="Prototipo_Pacchetto_Tessuti.stl"/>
+        </body>
+        <body name="Muscles" pos="0 0 0">
+          <geom name="Prototipo_Muscoli_DX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscoli_DX.stl"/>
+          <geom name="Prototipo_Muscolo_Stern_SX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscolo_Stern_SX.stl"/>
+          <geom name="Prototipo_Muscolo_Miloioideo_DX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscolo_Miloioideo_DX.stl"/>
+          <geom name="Prototipo_Muscoli_SX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscoli_SX.stl"/>
+          <geom name="Prototipo_Muscolo_Stern_DX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscolo_Stern_DX.stl"/>
+          <geom name="Prototipo_Muscolo_Miloioideo_SX.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Muscolo_Miloioideo_SX.stl"/>
+          <geom name="Prototipo_Flessori_Spinali.stl" group="2" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Flessori_Spinali.stl"/>
+        </body>
+        <body name="Various" pos="0 0 0">
+          <geom name="Prototipo_Nervo_Vago_SX.stl" group="2" rgba="0.87 0.8 0.28 1" mesh="Prototipo_Nervo_Vago_SX.stl"/>
+          <geom name="Prototipo_Membrana_Giugulare-Carotide_SX.stl" group="2" rgba="0 0 0 1" mesh="Prototipo_Membrana_Giugulare-Carotide_SX.stl"/>
+          <geom name="Prototipo_Legamenti.stl" group="2" rgba="0.87 0.84 0.69 1" mesh="Prototipo_Legamenti.stl"/>
+          <geom name="Prototipo_Membrana_Giugulare-Carotide_DX.stl" group="2" rgba="0 0 0 1" mesh="Prototipo_Membrana_Giugulare-Carotide_DX.stl"/>
+          <geom name="Prototipo_Pacchetto_Laringe-Trachea.stl" group="2" rgba="0.71 0.86 0.9 1" mesh="Prototipo_Pacchetto_Laringe-Trachea.stl"/>
+          <geom name="Prototipo_Esofago.stl" group="2" rgba="0.6545 0.0935 0.068 1" mesh="Prototipo_Esofago.stl"/>
+          <geom name="Prototipo_Nervo_Vago_DX.stl" group="2" rgba="0.87 0.8 0.28 1" mesh="Prototipo_Nervo_Vago_DX.stl"/>
+          <geom name="Prototipo_Osso_Ioide.stl" group="2" rgba="0.86 0.81 0.57 1" mesh="Prototipo_Osso_Ioide.stl"/>
+          <geom name="Prototipo_Tiroide.stl" group="2" rgba="0.6545 0.0935 0.068 1" mesh="Prototipo_Tiroide.stl"/>
+        </body>
+        <body name="Veins" pos="0 0 0">
+          <geom name="Prototipo_Vene-Arterie_Vertebrali_DX.stl" group="3" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Vene-Arterie_Vertebrali_DX.stl"/>
+          <geom name="Prototipo_Arteria_Carotide_SX.stl" group="3" rgba="1 0 0.01 1" mesh="Prototipo_Arteria_Carotide_SX.stl"/>
+          <geom name="Prototipo_Vena_Giugulare_DX.stl" group="3" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Vena_Giugulare_DX.stl"/>
+          <geom name="Prototipo_Vena_Giugulare_SX.stl" group="3" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Vena_Giugulare_SX.stl"/>
+          <geom name="Prototipo_Vene-Arterie_Vertebrali_SX.stl" group="3" rgba="0.8245 0.1358 0.3007 1" mesh="Prototipo_Vene-Arterie_Vertebrali_SX.stl"/>
+          <geom name="Prototipo_Arteria_Carotide_DX.stl" group="3" rgba="1 0 0.01 1" mesh="Prototipo_Arteria_Carotide_DX.stl"/>
+        </body>
+        <body name="Medulla" pos="0 0 0">
+          <geom name="Prototipo_Midollo_Parte_Interna.stl" conaffinity="5" group="4" rgba="0.87 0.8 0.28 1" mesh="Prototipo_Midollo_Parte_Interna.stl"/>
+          <geom name="Prototipo_Midollo_Parte_Esterna.stl" conaffinity="5" group="4" rgba="0.87 0.8 0.28 1" mesh="Prototipo_Midollo_Parte_Esterna.stl"/>
+        </body>
+        <body name="Spine" pos="-7.242e-05 0.03036 0.424" gravcomp="1">
+          <body name="Prototipo_Vertebra_C1.stl" pos="8.539e-05 0.502 0.0406" gravcomp="1">
+            <joint name="Prototipo_Vertebra_C1" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+            <geom name="Prototipo_Vertebra_C1.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="-1.297e-05 -0.5324 -0.4646" mesh="Prototipo_Vertebra_C1.stl"/>
+            <body name="Prototipo_Vertebra_C2.stl" pos="-2.758e-05 -0.1521 0.017" gravcomp="1">
+              <joint name="Prototipo_Vertebra_C2" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+              <geom name="Prototipo_Vertebra_C2.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.46e-05 -0.3803 -0.4816" mesh="Prototipo_Vertebra_C2.stl"/>
+              <body name="Prototipo_Disco_Intervertebrale_C2-3.stl" pos="-0.002575 -0.0953 0.03672" gravcomp="1">
+                <joint name="Prototipo_Disco_Intervertebrale_C2-3" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                <geom name="Prototipo_Disco_Intervertebrale_C2-3.stl" contype="2" conaffinity="5" group="5" rgba="0.54 0.67 0.86 1" pos="0.002589 -0.285 -0.5183" mesh="Prototipo_Disco_Intervertebrale_C2-3.stl"/>
+                <body name="Prototipo_Vertebra_C3.stl" pos="0.002574 -0.0913 -0.02318" gravcomp="1">
+                  <joint name="Prototipo_Vertebra_C3" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                  <geom name="Prototipo_Vertebra_C3.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.576e-05 -0.1937 -0.4951" mesh="Prototipo_Vertebra_C3.stl"/>
+                  <body name="Prototipo_Disco_Intervertebrale_C3-4.stl" pos="0.0006576 -0.07422 0.05555" gravcomp="1">
+                    <joint name="Prototipo_Disco_Intervertebrale_C3-4" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                    <geom name="Prototipo_Disco_Intervertebrale_C3-4.stl" contype="2" conaffinity="5" group="5" rgba="0.54 0.67 0.86 1" pos="-0.0006418 -0.1195 -0.5507" mesh="Prototipo_Disco_Intervertebrale_C3-4.stl"/>
+                    <body name="Prototipo_Vertebra_C4.stl" pos="-0.0006551 -0.07065 -0.03795" gravcomp="1">
+                      <joint name="Prototipo_Vertebra_C4" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                      <geom name="Prototipo_Vertebra_C4.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.331e-05 -0.04881 -0.5127" mesh="Prototipo_Vertebra_C4.stl"/>
+                      <body name="Prototipo_Disco_Intervertebrale_C4-5.stl" pos="8.674e-06 -0.08287 0.06871" gravcomp="1">
+                        <joint name="Prototipo_Disco_Intervertebrale_C4-5" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                        <geom name="Prototipo_Disco_Intervertebrale_C4-5.stl" contype="2" conaffinity="5" group="5" rgba="0.54 0.67 0.86 1" pos="4.639e-06 0.03406 -0.5814" mesh="Prototipo_Disco_Intervertebrale_C4-5.stl"/>
+                        <body name="Prototipo_Vertebra_C5.stl" pos="-8.587e-06 -0.06763 -0.05025" gravcomp="1">
+                          <joint name="Prototipo_Vertebra_C5" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                          <geom name="Prototipo_Vertebra_C5.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.323e-05 0.1017 -0.5312" mesh="Prototipo_Vertebra_C5.stl"/>
+                          <body name="Prototipo_Disco_Intervertebrale_C5-6.stl" pos="-7.329e-05 -0.1004 0.06568" gravcomp="1">
+                            <joint name="Prototipo_Disco_Intervertebrale_C5-6" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                            <geom name="Prototipo_Disco_Intervertebrale_C5-6.stl" contype="2" conaffinity="5" group="5" rgba="0.54 0.67 0.86 1" pos="8.652e-05 0.2021 -0.5969" mesh="Prototipo_Disco_Intervertebrale_C5-6.stl"/>
+                            <body name="Prototipo_Vertebra_C6.stl" pos="6.968e-05 -0.05308 -0.06236" gravcomp="1">
+                              <joint name="Prototipo_Vertebra_C6" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                              <geom name="Prototipo_Vertebra_C6.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.684e-05 0.2552 -0.5345" mesh="Prototipo_Vertebra_C6.stl"/>
+                              <body name="Prototipo_Disco_Intervertebrale_C6-7.stl" pos="6.025e-05 -0.1057 0.04364" gravcomp="1">
+                                <joint name="Prototipo_Disco_Intervertebrale_C6-7" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                                <geom name="Prototipo_Disco_Intervertebrale_C6-7.stl" contype="2" conaffinity="5" group="5" rgba="0.54 0.67 0.86 1" pos="-4.341e-05 0.3609 -0.5782" mesh="Prototipo_Disco_Intervertebrale_C6-7.stl"/>
+                                <body name="Prototipo_Vertebra_C7.stl" pos="-5.896e-05 -0.0189 -0.08844" gravcomp="1">
+                                  <joint name="Prototipo_Vertebra_C7" type="hinge" pos="0 0 0" axis="1 0 0" range="-0.05 0.05"/>
+                                  <geom name="Prototipo_Vertebra_C7.stl" contype="2" conaffinity="5" group="5" rgba="0.81 0.87 0.56 1" pos="1.555e-05 0.3798 -0.4897" mesh="Prototipo_Vertebra_C7.stl"/>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="Capsule" pos="0 0 0.2">
+      <freejoint name="//unnamed_joint_12"/>
+      <body name="//unnamed_body_21">
+        <geom name="//unnamed_geom_44" type="capsule" contype="1" conaffinity="1" size="0.1 0.1" rgba="0.8 0.2 0.1 1"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <weld name="//unnamed_equality_0" solref="0.02 1" solimp="0.9 0.95 0.001" body1="Prototipo_Vertebra_C7.stl" body2="world"/>
+  </equality>
+
+  <tendon>
+    <fixed name="tendon1">
+      <joint joint="Prototipo_Vertebra_C1" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C2" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon2">
+      <joint joint="Prototipo_Vertebra_C2" coef="0.05"/>
+      <joint joint="Prototipo_Disco_Intervertebrale_C2-3" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon3">
+      <joint joint="Prototipo_Disco_Intervertebrale_C2-3" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C3" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon4">
+      <joint joint="Prototipo_Vertebra_C3" coef="0.05"/>
+      <joint joint="Prototipo_Disco_Intervertebrale_C3-4" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon5">
+      <joint joint="Prototipo_Disco_Intervertebrale_C3-4" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C4" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon6">
+      <joint joint="Prototipo_Vertebra_C4" coef="0.05"/>
+      <joint joint="Prototipo_Disco_Intervertebrale_C4-5" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon7">
+      <joint joint="Prototipo_Disco_Intervertebrale_C4-5" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C5" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon8">
+      <joint joint="Prototipo_Vertebra_C5" coef="0.05"/>
+      <joint joint="Prototipo_Disco_Intervertebrale_C5-6" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon9">
+      <joint joint="Prototipo_Disco_Intervertebrale_C5-6" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C6" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon10">
+      <joint joint="Prototipo_Vertebra_C6" coef="0.05"/>
+      <joint joint="Prototipo_Disco_Intervertebrale_C6-7" coef="0.05"/>
+    </fixed>
+    <fixed name="tendon11">
+      <joint joint="Prototipo_Disco_Intervertebrale_C6-7" coef="0.05"/>
+      <joint joint="Prototipo_Vertebra_C7" coef="0.05"/>
+    </fixed>
+  </tendon>
+
+</mujoco>

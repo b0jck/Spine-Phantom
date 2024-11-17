@@ -1,0 +1,38 @@
+<mujoco model="phantom">
+  <compiler angle="radian"/>
+  <option timestep="0.005" noslip_iterations="4"/>
+
+  <size njmax="900" nconmax="300" nkey="1"/>
+
+  <visual>
+    <global offwidth="1920" offheight="1080"/>
+    <map znear="0.001"/>
+    <scale jointlength="8.0" jointwidth="0.5" framelength="2.0" framewidth="0.3"/>
+  </visual>
+  <statistic meansize="0.01" extent="1.0"/>
+
+  <default>
+    <joint limited="true" solreflimit="0.01 1" solimplimit="0.9 0.99 0.01" stiffness="0.1" armature="0.0001" damping="0.01"/>
+    <geom friction="0.9" solref="0.01 1" solimp="0.95 0.99 0.001" type="mesh" contype="0" conaffinity="0"/>
+    <tendon rgba="0.5 0 0 1"/>
+    <general ctrllimited="true" ctrlrange="-5 5" dyntype="filter" dynprm="0.05" gainprm="0.02"/>
+
+    <default class="collision_primitive">
+      <geom type="capsule" contype="1" conaffinity="1" condim="1" group="3" rgba="0 0.5 0.5 1" density="300.0"/>
+    </default>
+
+  </default>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.6 0.8 0.9" rgb2="0 0 0" width="64" height="64"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.1 0.2 0.3" rgb2="0.2 0.3 0.4" mark="edge" markrgb="0.2 0.3 0.4" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+  <light directional="true" diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 5" castshadow="false"/>
+    <light diffuse=".6 .6 .6" specular="0.2 0.2 0.2" pos="0 0 4"/>
+
+    <geom name="floor" conaffinity="1" type="plane" size="10 10 0.1" material="grid"/>
+  </worldbody>
+</mujoco>
