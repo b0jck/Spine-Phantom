@@ -3,6 +3,8 @@ MuJoCo Scene for Surgical Spine Phantom. Read "Operational Report" for more info
 ## Contents of this repository and brief User's Guide
 ### Operational Report
 Read for more info on this project.
+### Spine Report Folder
+Conrains .tex file and all figures used to generate Operational Report
 ### Python Scripts Folder
 Contains the Python Scripts necessary to build the scene. User can run the "create_xml.py" scipt, specifying the directory to the .stl files and to the "base_model.xml" file. The script will create a new .xml file (with a chosen name) that contains the MuJoCo scene. Otherwise, use one of the available scenes.
 ### XML Files Folder
