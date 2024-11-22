@@ -1,5 +1,5 @@
 <mujoco model="phantom">
-  <compiler meshdir="Phantom_Meshes_cm" texturedir="Phantom_Meshes_cm"/>
+  <compiler meshdir="../stl_files/Phantom_Meshes_cm" texturedir="../stl_files/Phantom_Meshes_cm"/>
 
   <compiler angle="radian"/>
 
